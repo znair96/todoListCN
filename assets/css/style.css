@@ -1,0 +1,108 @@
+body{
+    background-color: #808080;
+    margin-top:0;
+}
+#todo-container{
+    width:40%;
+    background-color: white;
+    margin:auto; 
+}
+#todo-container h1{
+    font-weight:lighter;
+    text-align: center;
+    margin-top: 0;
+    border-bottom:1px solid lightgray;
+    padding-top: 24px;
+    padding-bottom: 8px;
+    margin-bottom:0;
+}
+#todoform{
+    border-bottom: 1px solid lightgray;
+    padding:8px;
+    padding-bottom:20px;
+}
+#todoExtras,#todoform label{
+    display: block;
+    text-transform: uppercase;
+    margin-left:12px;
+    font-size: 14px;
+    margin-top: 8px;
+}
+#todoform input{
+     border:0;
+     outline: none;
+     width:inherit;
+     padding:8px;
+     padding-left:12px;
+}
+#todoExtras{
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgrey;
+}
+#todoExtras input{
+    border:0;
+    outline: none;
+    width:94%;
+    padding:8px;
+    padding-left:12px;
+
+}
+#todoFields-1{
+    width:50%;
+    border-right: 1px solid lightgray;
+}
+#todoFields-2{
+    width:50%;
+}
+select{
+    border: 0;
+    background-color: white;
+    width: 94%;
+    outline: none;
+    height: 30px;
+    margin-left: 8px;
+}
+#taskButtons{
+    display: flex;
+    justify-content: center;
+    gap:8px;
+}
+.taskButton{
+    height:50px;
+    font-size: 18px;
+    padding:8px;
+    margin-top:32px;
+    margin-bottom: 32px;
+    border:0;
+    color:white;
+    border-radius: 4px;
+}
+.taskButton i{
+    padding-right:8px;
+}
+.red{
+    background-color: red;
+}
+.black{
+    background-color: black;
+}
+#todoLists{
+    overflow-y: scroll;
+    height:300px;
+}
+.taskResult{
+    border-top: 1px solid lightgray;
+    padding:12px;
+    
+}
+.taskResult i{
+    padding-right:8px;
+}
+.taskResult p{
+    margin-left:22px;
+}
+.taskResult input{
+    margin-right: 8px;
+}

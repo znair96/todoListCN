@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <div id = "todo-container"> 
+        <h1>TODO App</h1>
+        <form action="/addtask" method = "POST">
+        <div id = "todoform">
+            <label for="descr">Description</label>
+            <input type="text" name="todoDescription" id="descr" placeholder = "What do you need to do?" required>
+        </div>
+        <div id="todoExtras">
+            <div id="todoFields-1">
+                <label for="">Category</label>
+                <select name="category" id="">
+                    <option value="none">Choose a category</option>
+                    <option value="PERSONAL">Personal</option>
+                    <option value="WORK">Work</option>
+                    <option value="SCHOOL">School</option>
+                    <option value="CLEANING">Cleaning</option>
+                    <option value="OTHER">Other</option>
+                </select>
+            </div>
+            <div id="todoFields-2">
+                <label for="">Due Date</label>
+                <input type="date" name="date" id="">
+            </div>
+        </div>
+        <div id="taskButtons">
+            <button type="submit" class="taskButton black" name="add" value="addtask"><i class="fas fa-plus"></i>ADD TASK</button>
+            <button type="submit" class="taskButton red" name="delete" value="deletetask"><i class="far fa-trash-alt"></i>DELETE TASKS</button>
+        </div>
+        </form>
+
+        <div id="todoLists">
+            <% for(let task of taskList) {%>
+                  <div class="taskResult">
+                      <input type="checkbox" name="" id=""><label><%= task.taskDescription %></label>
+                      <p><i class="far fa-calendar-alt"></i><%= task.dueDate.toString().slice(4,15) %></p>
+                  </div>  
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
