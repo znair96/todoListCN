@@ -11,10 +11,10 @@
 <body>
     <div id = "todo-container"> 
         <h1>TODO App</h1>
-        <form action="/addtask" method = "POST">
+        <form action="/taskAction" method = "POST">
         <div id = "todoform">
             <label for="descr">Description</label>
-            <input type="text" name="todoDescription" id="descr" placeholder = "What do you need to do?" required>
+            <input type="text" name="todoDescription" id="descr" placeholder = "What do you need to do?" >
         </div>
         <div id="todoExtras">
             <div id="todoFields-1">
@@ -34,19 +34,20 @@
             </div>
         </div>
         <div id="taskButtons">
-            <button type="submit" class="taskButton black" name="add" value="addtask"><i class="fas fa-plus"></i>ADD TASK</button>
-            <button type="submit" class="taskButton red" name="delete" value="deletetask"><i class="far fa-trash-alt"></i>DELETE TASKS</button>
+            <button type="submit" class="taskButton black" name="operation" value="addtask"><i class="fas fa-plus"></i>ADD TASK</button>
+            <button type="submit" class="taskButton red" name="operation" value="deletetask"><i class="far fa-trash-alt"></i>DELETE TASKS</button>
         </div>
-        </form>
-
         <div id="todoLists">
             <% for(let task of taskList) {%>
                   <div class="taskResult">
-                      <input type="checkbox" name="" id=""><label><%= task.taskDescription %></label>
+                      <input type="checkbox" name="taskCheckbox" id="" value=<%= task._id %>><label><%= task.taskDescription %></label>
                       <p><i class="far fa-calendar-alt"></i><%= task.dueDate.toString().slice(4,15) %></p>
                   </div>  
             <% } %>
         </div>
+        </form>
+
+        
     </div>
 </body>
 </html>
