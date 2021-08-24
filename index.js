@@ -18,9 +18,6 @@ app.set('views',path.join(__dirname,'views'));
 app.set('view engine','ejs');
 
 
-
-
-
 app.listen(port,function(err){
     if(err){
         console.log(err);

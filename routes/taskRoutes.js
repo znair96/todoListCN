@@ -4,13 +4,10 @@ const router = express.Router();
 
 const indexPageController = require('../controllers/indexPageController');
 
-const addTaskController = require('../controllers/addTaskController');
+const taskActionController = require('../controllers/taskActionController');
 
-const removeTaskController = require('../controllers/removeTaskController');
 router.get('/',indexPageController.todoPage);
 
-router.post('/taskAction',addTaskController.addTask);
-
-// router.post('/removetask',removeTaskController.deleteTasks);
+router.post('/taskAction',taskActionController.taskAction);
 
 module.exports = router;

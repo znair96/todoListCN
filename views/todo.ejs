@@ -34,13 +34,14 @@
             </div>
         </div>
         <div id="taskButtons">
-            <button type="submit" class="taskButton black" name="operation" value="addtask"><i class="fas fa-plus"></i>ADD TASK</button>
-            <button type="submit" class="taskButton red" name="operation" value="deletetask"><i class="far fa-trash-alt"></i>DELETE TASKS</button>
+            <button type="submit" class="taskButton black" name="operation" id="addTask" value="addtask"><i class="fas fa-plus"></i>ADD TASK</button>
+            <button type="submit" class="taskButton red" id="deleteTask" name="operation" value="deletetask"><i class="far fa-trash-alt"></i>DELETE TASKS</button>
         </div>
         <div id="todoLists">
+            <% var taskCount = taskList.length %>
             <% for(let task of taskList) {%>
                   <div class="taskResult">
-                      <input type="checkbox" name="taskCheckbox" id="" value=<%= task._id %>><label><%= task.taskDescription %></label>
+                      <input type="checkbox" name="taskCheckbox" id="task-<%= taskCount-- %>" class="checkList" value=<%= task._id %>><label><%= task.taskDescription %></label>
                       <p><i class="far fa-calendar-alt"></i><%= task.dueDate.toString().slice(4,15) %></p>
                       <% if(task.category != "none") { %>
                           <p class = <%= task.category %> ><%= task.category %></p>
@@ -50,16 +51,8 @@
             <% } %>
         </div>
         </form>
-        <script>
-            let todayDate = new Date();
-            let dd = todayDate.getDate();
-            let mm = todayDate.getMonth()+1;
-            let yyyy = todayDate.getFullYear();
-            if(mm<10){
-                mm = "0"+mm;
-            }
-            let currentDate = yyyy+"-"+mm+"-"+dd;
-            document.getElementById('dateDue').setAttribute('min',currentDate);
+        <script src = "/js/script.js">
+           
         </script>
         
     </div>
