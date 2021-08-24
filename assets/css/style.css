@@ -34,6 +34,7 @@ body{
      width:inherit;
      padding:8px;
      padding-left:12px;
+     width:94%;
 }
 #todoExtras{
     width: inherit;
@@ -93,6 +94,7 @@ select{
     height:250px;
 }
 .taskResult{
+    position:relative;
     border-top: 1px solid lightgray;
     padding:12px;
     
@@ -105,4 +107,51 @@ select{
 }
 .taskResult input{
     margin-right: 8px;
+}
+.SCHOOL{
+    display: inline;
+    position:absolute;
+    right:20px;
+    top:10px;
+   color : white;
+   background-color: #eed85e;
+   padding:6px;
+}
+
+
+.WORK{
+    display: inline;
+    position:absolute;
+    right:20px;
+    top:10px;
+    color : white;
+    background-color: violet;
+    padding:6px;
+}
+.PERSONAL{
+    display: inline;
+    position:absolute;
+    right:20px;
+    top:10px;
+    color : white;
+    background-color: darkgoldenrod;
+    padding:6px;
+}
+.CLEANING{
+    display: inline;
+    position:absolute;
+    right:20px;
+    top:10px;
+    color : white;
+    background-color: rgb(216, 162, 96);
+    padding:6px;
+}
+.OTHER{
+    display: inline;
+    position:absolute;
+    right:20px;
+    top:10px;
+    color : white;
+    background-color: black;
+    padding:6px;
 }
