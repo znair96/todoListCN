@@ -7,6 +7,7 @@ const app = express();
 
 const db = require('./config/mongoose');
 
+
 app.use(express.static(__dirname + '/assets'));
 
 app.use(express.urlencoded({ extended : true }));

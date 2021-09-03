@@ -3,9 +3,10 @@ let todayDate = new Date();
 let dd = todayDate.getDate();
 let mm = todayDate.getMonth()+1;
 let yyyy = todayDate.getFullYear();
-if(mm<10){
-    mm = "0"+mm;
-}
+
+mm = (mm<10) ? "0"+mm  : mm;
+dd = (dd<10) ? "0"+dd : dd;
+
 let currentDate = yyyy+"-"+mm+"-"+dd;
 document.getElementById('dateDue').setAttribute('min',currentDate);
 let taskResult = document.getElementsByClassName('taskResult');
